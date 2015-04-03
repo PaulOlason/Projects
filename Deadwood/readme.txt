@@ -1,0 +1,1 @@
+Deadwood is a game for 2 two 8 players. Run with a value between 2 and 8 to determine the number of player pieces.
