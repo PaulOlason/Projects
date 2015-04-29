@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".HangMan">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/title"
+            android:id="@+id/title"
+            android:layout_gravity="center_horizontal"
+            android:gravity="top"
+            android:textSize="50sp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="145dp"
+                android:id="@+id/hangman"
+                android:src="@drawable/hangman6"
+                android:layout_weight="0.61"
+                android:contentDescription="@string/cont_desc" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.22">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cur_word"
+                    android:id="@+id/cur_word"
+                    android:layout_weight="0.22"
+                    android:textColor="#ff000000"
+                    android:gravity="fill_vertical"
+                    android:layout_gravity="right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/word"
+                    android:id="@+id/word"
+                    android:layout_weight="0.22"
+                    android:textColor="#ffff1928"
+                    android:layout_gravity="right" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="78dp"
+            android:weightSum="1">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText"
+                android:inputType="text"
+                android:textColor="#ff4679ff"
+                android:hint="@string/hint"
+                android:layout_weight="0.90"
+                android:gravity="center_horizontal" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/guess"
+                android:id="@+id/guess"
+                android:onClick="guess_click" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="224dp"
+            android:layout_height="0dp"
+            android:text="@string/prompt"
+            android:id="@+id/prompt"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:shadowColor="#ff000000"
+            android:layout_weight="0.33"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:id="@+id/prev_guess"
+            android:gravity="center_horizontal"
+            android:text="@string/guess"
+            android:layout_weight="0.30" />
+
+    </LinearLayout>
+
+</RelativeLayout>
